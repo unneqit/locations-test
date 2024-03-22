@@ -1,27 +1,31 @@
 import psycopg2
+import os
+
+# Fetch the database credentials from environment variables
+password = os.getenv("DB_PASSWORD")
 
 # Database connection parameters with fake credentials
 db_config1 = {
-    "host": "fake_host_1.example.com",
-    "database": "fake_database_name_1",
-    "user": "fake_user_1",
-    "password": "FAKE_PASSWORD_123"
+    "host": os.getenv("DB_HOST_1"),
+    "database": os.getenv("DB_NAME_1"),
+    "user": os.getenv("DB_USER_1"),
+    "password": os.getenv("DB_PASSWORD")
 }
 
 # This is a comment
 db_config2 = {
-    "host": "fake_host_2.example.com",
-    "database": "fake_database_name_2",
-    "user": "fake_user_2",
-    "password": "FAKE_PASSWORD_123"
+    "host": os.getenv("DB_HOST_1"),
+    "database": os.getenv("DB_NAME_1"),
+    "user": os.getenv("DB_USER_1"),
+    "password": os.getenv("DB_PASSWORD")
 }
 
 # This is a comment
 db_config3 = {
-    "host": "fake_host_3.example.com",
-    "database": "fake_database_name_3",
-    "user": "fake_user_3",
-    "password": "FAKE_PASSWORD_123"
+    "host": os.getenv("DB_HOST_1"),
+    "database": os.getenv("DB_NAME_1"),
+    "user": os.getenv("DB_USER_1"),
+    "password": os.getenv("DB_PASSWORD")
 }
 
 # Function to connect to the database and execute a simple query
